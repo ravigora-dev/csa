@@ -1,8 +1,4 @@
 import { Link } from "react-router-dom";
-import rahulImage from "../../Images/trainers_images/Rahul_trainer.png";
-import avinashImage from "../../Images/trainers_images/avinash-image-v2.png";
-import pavanImage from "../../Images/trainers_images/pavan-img-trainer.avif";
-import rakeshMisraImage from "../../Images/trainers_images/Master_class_Rakesh_misra.avif";
 import pranaviImage from "../../Images/trainers_images/Sylender.png";
 import revanthImage from "../../Images/trainers_images/Uday_Bosch.png";
 import sriramImage from "../../Images/trainers_images/Ravi_accenture.png";
