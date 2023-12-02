@@ -1,0 +1,81 @@
+.top {
+  background-image: url("../../../Images/program_page/program_top_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0rem 3rem;
+}
+@media screen and (max-width: 768px) {
+  .top {
+    padding: 0rem 1rem;
+  }
+}
+.top-context-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6rem;
+  min-height: 70vh;
+}
+
+@media screen and (max-width: 789px) {
+  .top-context-container {
+    margin-top: 0rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+.program-heading {
+  color: #fff;
+  font-family: sofia-pro, sans-serif;
+  letter-spacing: 2px;
+  font-weight: 600;
+  line-height: 62px;
+  font-size: 42px;
+  font-style: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .program-heading {
+    font-size: 22px;
+    line-height: 38px;
+  }
+}
+.program-company-logo {
+  width: 60%;
+  border-radius: 10%;
+}
+
+@media screen and (max-width: 768px) {
+  .top-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .program-company-logo {
+    width: 40%;
+  }
+}
+.program-home-request-btn {
+  background-color: #fff;
+  border: none;
+  height: 38px;
+  width: 140px;
+  border-radius: 8px;
+  font-family: sofia-pro, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  .top-larger-device-request-btn {
+    display: none;
+  }
+}
+@media screen and (min-width: 769px) {
+  .top-mobile-device-request-btn {
+    display: none;
+  }
+}

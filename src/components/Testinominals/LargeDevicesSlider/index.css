@@ -1,0 +1,90 @@
+.testinominal-container {
+  margin: 3rem;
+  /* background-color: #333; */
+  padding: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .testinominal-container {
+    margin: 1px;
+  }
+}
+.each-testinominal {
+  text-align: center;
+  padding: 2rem;
+}
+.quote-and-review {
+  display: flex;
+  /* justify-content: flex-start; */
+  align-items: flex-start;
+}
+.quote-logo {
+  width: 20px;
+}
+.stundent-review {
+  color: #183b56;
+  font-family: sofia-pro, sans-serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 22px;
+  font-size: 12px;
+  font-style: normal;
+  margin: 0px;
+  height: 180px;
+}
+.name-and-comapany-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  /* border: 1px solid red; */
+  margin: 1.5rem 0rem;
+}
+.student-name {
+  margin: 0px;
+  padding: 0px;
+  border-right: 1px solid rgb(126, 122, 122);
+  padding-right: 1rem;
+  color: #183b56;
+  font-size: 16px;
+}
+.company-logo {
+  width: 10px;
+  margin: 0px;
+  padding: 0px;
+  margin-left: 1rem;
+}
+.package-text {
+  font-size: 28px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(243, 5, 17);
+  text-shadow: 1px 1px 1px #000;
+}
+.stundent-image {
+  width: 180px;
+  height: 260px;
+  border-radius: 50%;
+  margin: auto;
+  background-color: #ffd301;
+  text-align: center;
+}
+.slick-prev,
+.slick-next {
+  background-color: #183b56;
+  border-radius: 50%;
+}
+.slick-prev,
+.slick-next:hover {
+  background-color: #183b56;
+}
+.slick-prev,
+.slick-next:active {
+  background-color: #183b56;
+}
+.slick-prev::before {
+  background-color: #183b56;
+  border-radius: 50%;
+}
+.slick-next::after {
+  background-color: #183b56;
+}
