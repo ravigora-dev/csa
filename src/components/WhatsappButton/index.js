@@ -9,7 +9,7 @@ const WhatsAppButton = () => {
   return (
     <div className="whatsapp-button">
       <Link
-        to="https://wa.me/+918919734391"
+        to="https://wa.me/+916301046346"
         className="whatsapp-btn"
         target="_blank"
       >
