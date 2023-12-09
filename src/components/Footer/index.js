@@ -25,7 +25,7 @@ const Footer = () => {
               alt="socialMediaIcon"
               className="social-media-icon"
             />
-            <p className="whatsup-number">+91 1234567890</p>
+            <p className="whatsup-number">+91 6301046346</p>
           </div>
           <div className="email-section">
             <img
@@ -33,7 +33,7 @@ const Footer = () => {
               alt="socialMediaIcon"
               className="social-media-icon"
             />
-            <p className="company-eamil">example@gmail.com</p>
+            <p className="company-eamil">contact@careersureacademy.com</p>
           </div>
         </div>
         <div>
