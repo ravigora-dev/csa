@@ -158,8 +158,7 @@ const Footer = () => {
       <hr className="row" />
       <div className="footer-middle-part">
         <div className="social-media-container">
-          <Link 
-          to="https://www.instagram.com/careersure_academy/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" 
+          <Link to="https://www.instagram.com/careersure_academy/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" 
           target="_blank">
             <img
               src={instagramIcon}

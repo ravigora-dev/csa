@@ -32,7 +32,7 @@ const Header = () => {
               {homeBtn ? <MdClear /> : <RxHamburgerMenu />}
             </button>
             <button type="button" className="join-now-btn">
-              <NavLink to="https://wa.me/+918919734391" target="_blank">
+              <NavLink to="https://wa.me/+916301046346" target="_blank">
                 <FaArrowRightToBracket />
               </NavLink>
             </button>
@@ -109,7 +109,7 @@ const Header = () => {
             </li>
             <li className="nav-menu-item">
               <NavLink
-                to="https://wa.me/+918919734391"
+                to="https://wa.me/+916301046346"
                 target="_blank"
                 className="nav-link"
                 activeclassname="active"

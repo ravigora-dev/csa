@@ -49,7 +49,7 @@ const HiredCompanies = () => {
       <div className="callback-btn">
         <button type="button" className="hired-request-btn">
           <Link
-            to="https://wa.me/+918919734391"
+            to="https://wa.me/+916301046346"
             className="whatsapp-btn"
             target="_blank"
           >

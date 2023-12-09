@@ -140,7 +140,7 @@ const Trainers = () => {
       <div className="traine-callback-btn">
         <button type="button" className="traine-request-btn">
           <Link
-            to="https://wa.me/+918919734391"
+            to="https://wa.me/+916301046346"
             className="whatsapp-btn"
             target="_blank"
           >

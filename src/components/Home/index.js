@@ -74,7 +74,7 @@ const Home = () => {
                 <div className="callback-btn-container">
                   <button type="button" className="request-btn">
                     <Link
-                      to="https://wa.me/+918919734391"
+                      to="https://wa.me/+916301046346"
                       className="whatsapp-btn"
                       target="_blank"
                     >
@@ -119,7 +119,7 @@ const Home = () => {
                 <div className="callback-btn-container">
                   <button type="button" className="request-btn">
                     <Link
-                      to="https://wa.me/+918919734391"
+                      to="https://wa.me/+916301046346"
                       className="whatsapp-btn"
                       target="_blank"
                     >
