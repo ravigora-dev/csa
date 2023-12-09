@@ -1,4 +1,4 @@
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import companyLogo from "../../Images/csa.png";
 import upiIcon from "../../Images/payment_logos/upi-icon.svg";
 import rupayIcon from "../../Images/payment_logos/rupay-icon.svg";
