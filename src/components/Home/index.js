@@ -29,7 +29,7 @@ const Home = () => {
                 {/*<span className="home-heading-academy-name">
                   Career Sure Academy -<br />
   </span> */}
-                <span className="quatestion">– - Where Your Success Story Begins!"</span>
+                <span className="quatestion"> – Where Your Success Story Begins!"</span>
               </h1>
               <img
                 src={companyLogo}
