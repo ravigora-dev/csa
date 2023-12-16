@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import pranaviImage from "../../Images/trainers_images/Sylender.png";
 import revanthImage from "../../Images/trainers_images/Uday_Bosch.png";
 import sriramImage from "../../Images/trainers_images/Ravi_accenture.png";
+import rahulImage from "../../Images/trainers_images/rahul_trainer.jpg";
 import trivikramImage from "../../Images/trainers_images/Chandu_accenture.png";
 import studentImage from "../../Images/trainers_images/Vamsi_infosys.png";
 import { IoIosCall } from "react-icons/io";
@@ -37,6 +38,12 @@ const Trainers = () => {
                 <p className="traine-name">Avinash Dara</p>
                 <p className="traine-company">Ex. Nvidia</p>
               </div> */}
+              <div className="each-tainee-container">
+                <img src={rahulImage} alt="sriram" className="traine-image" />
+                <p className="traine-name">Rahul</p>
+                <p className="traine-company">Senior DevOps Analyst
+                  | Infosys</p>
+              </div>
               <div className="each-tainee-container">
                 <img src={sriramImage} alt="sriram" className="traine-image" />
                 <p className="traine-name">Ravi</p>
