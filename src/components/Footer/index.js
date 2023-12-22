@@ -19,22 +19,28 @@ const Footer = () => {
         <div>
           <img src={companyLogo} alt="companyLogo" className="company-logo" />
           <h4 className="footer-first-part-heading">Reach Us</h4>
+
+          <Link to="https://wa.me/+916301046346" target="_blank" className="footer-link">
           <div className="phone-number-section">
             <img
               src={whatsappIcon}
               alt="socialMediaIcon"
               className="social-media-icon"
             />
-            <p className="whatsup-number">+91 6301046346</p>
+            <p className="whatsup-number footer-link">+91 6301046346</p>
           </div>
+          </Link>
+
+          <Link to="mailto:contact@careersureacademy.com" className="footer-link">
           <div className="email-section">
             <img
               src={emailIcon}
               alt="socialMediaIcon"
               className="social-media-icon"
             />
-            <p className="company-eamil">contact@careersureacademy.com</p>
+            <p className="company-eamil footer-link">contact@careersureacademy.com</p>
           </div>
+          </Link>
         </div>
         <div>
           <h4 className="footer-first-part-heading">Quick Links</h4>
