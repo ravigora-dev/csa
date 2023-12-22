@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import companyLogo from "../../Images/csa.png";
 import upiIcon from "../../Images/payment_logos/upi-icon.svg";
 import rupayIcon from "../../Images/payment_logos/rupay-icon.svg";
@@ -47,64 +48,64 @@ const Footer = () => {
           <div className="quick-links-container">
             <ul className="links-container">
               <li className="footer-link-item">
-                <Link
+                <ScrollLink
                   to="home"
                   smooth={true}
                   duration={1000}
                   className="footer-link"
                 >
                   Home
-                </Link>
+                </ScrollLink>
               </li>
               <li className="footer-link-item">
-                <Link
+                <ScrollLink
                   to="companies"
                   smooth={true}
                   duration={1000}
                   className="footer-link"
                 >
                   Companies
-                </Link>
+                </ScrollLink>
               </li>
               <li className="footer-link-item">
-                <Link
+                <ScrollLink
                   to="trainers"
                   smooth={true}
                   duration={1000}
                   className="footer-link"
                 >
                   Trainers
-                </Link>
+                </ScrollLink>
               </li>
               <li className="footer-link-item">
-                <Link
+                <ScrollLink
                   to="whyus"
                   smooth={true}
                   duration={1000}
                   className="footer-link"
                 >
                   Why us
-                </Link>
+                </ScrollLink>
               </li>
               <li className="footer-link-item">
-                <Link
+                <ScrollLink
                   to="review"
                   smooth={true}
                   duration={1000}
                   className="footer-link"
                 >
                   Reviews
-                </Link>
+                </ScrollLink>
               </li>
               <li className="footer-link-item">
-                <Link
+                <ScrollLink
                   to="about"
                   smooth={true}
                   duration={1000}
                   className="footer-link"
                 >
                   About Us
-                </Link>
+                </ScrollLink>
               </li>
             </ul>
             {/* <ul className="links-container">
