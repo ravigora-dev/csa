@@ -25,7 +25,7 @@ const Home = () => {
           <div className="main-home-container">
             <div className="caption-container">
               <h1 className="home-heading">
-                "Unlocking a Future in Tech: <span className="home-heading-academy-name">Career Sure Academy</span>'s Exclusive Program with a 100% Job Guarantee  <br />
+                "Achieve Your Career Goals <span className="home-heading-academy-name">with Our IT Academy and Job Placement Guarantee"</span><br />
                 {/*<span className="home-heading-academy-name">
                   Career Sure Academy -<br />
   </span> */}
