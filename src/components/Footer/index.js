@@ -181,7 +181,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="copy-rights-container">
-        <p>&copy; 2019 - 2023 Career sure academy | All Rights Reserved</p>
+        <p>Copyright &copy; 2019 - 2024 Career Sure Academy | All Rights Reserved</p>
       </div>
     </div>
   );
