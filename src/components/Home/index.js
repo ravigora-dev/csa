@@ -128,8 +128,7 @@ const Home = () => {
                   </button>
                 </div>
               </div>
-            </div>
-            <h2>
+              <h2>
               Let's get your IT career built for confidence at <strong>Career Sure Academy</strong>, the #1 CS Placement Portal in Hyderabad.
             </h2>
             <p>
@@ -143,6 +142,7 @@ const Home = () => {
                 <li>Mindlessly grinding DSA on LeetCode</li>
               </ul>
             </p>
+            </div>
           </div>
           <Alumni />
           <Element name="companies">
