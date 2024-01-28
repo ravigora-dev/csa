@@ -19,7 +19,7 @@ const HiredCompanies = () => {
     <div className="hired-companies-container">
       <h2 className="hired-company-heading">
         <span className="company-count">15+</span> Companies have hired <br />
-        <span className="company-name">Career Sure Academy</span> learners
+        <span className="company-name">Career Sure Academy</span> course learners
       </h2>
       <div className="company-logos-container">
         <img src={googleLogo} alt={googleLogo} className="company-logo" />
@@ -54,7 +54,7 @@ const HiredCompanies = () => {
             target="_blank"
           >
             <IoIosCall className="calling-icon" />
-            Schedule a demo
+            Schedule a free demo
           </Link>
         </button>
       </div>

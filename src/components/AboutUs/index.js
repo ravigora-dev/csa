@@ -15,14 +15,33 @@ const AboutUs = () => {
       <div className="about-us-description-container">
         <BsHeartArrow className="aboutus-arrow-icon" />
         <p className="about-us-description">
-          At Career Sure Academy, we believe in nurturing talent and
-          transforming it into successful careers. With a commitment to
-          excellence, we provide an environment that fosters creativity,
-          innovation, and skill development. Our experienced educators,
-          industryaligned courses, and stateoftheart facilities make us a
-          leading choice for those aspiring to thrive in their chosen fields.
+          Career Sure Academy trainers believe in nurturing your talent and
+          transforming it into a successful career.<br/>
+          They are industry experts having 8+ years of development experience in the tech world themselves. So, who better than them to teach you?
         </p>
       </div>
+      <div className="about-us-description-container">
+        <BsHeartArrow className="aboutus-arrow-icon" />
+        <p className="about-us-description">
+          Career Sure Academy courses are not limited to the freshers only.
+          It's true that they need a headstart more than anyone in this fast-paced world.
+          Our course is for every learner -
+          <ul>
+            <li>the graduates</li>
+            <li>the ones stuck in bad job conditions</li>
+            <li>professionals working with low packages</li>
+            <li>the ones trying to make their switch from non-IT professions to an IT career</li>
+          </ul>
+          <br />
+          Come join us, and we'll help you discover the skills you're capable of.
+        </p>
+      </div>
+      <h4>
+      <strong>It's not us saying, it's <em>them</em>.</strong>
+      <p>
+        Our recently placed candidates shared their reasons why they chose Career Sure Academy over other Full Stack Development courses:
+      </p>
+      </h4>
     </div>
   );
 };

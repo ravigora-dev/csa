@@ -25,11 +25,11 @@ const Home = () => {
           <div className="main-home-container">
             <div className="caption-container">
               <h1 className="home-heading">
-                "Achieve Your Career Goals <span className="home-heading-academy-name">with Our IT Academy and Job Placement Guarantee"</span><br />
+                Career Sure Academy <span className="home-heading-academy-name">Full Stack Development (ReactJS) & Mobile App Development (React Native) Course</span><br />
                 {/*<span className="home-heading-academy-name">
                   Career Sure Academy -<br />
   </span> */}
-                <span className="quatestion"> – Where Your Success Story Begins!"</span>
+                <span className="quatestion">Internship in Hyderabad with 100% Job Placements in IT</span>
               </h1>
               <img
                 src={companyLogo}
@@ -53,8 +53,7 @@ const Home = () => {
                 </div>
                 <div className="academy-description-container">
                   <h3 className="academy-description">
-                    Get trained from Industry experts having more 8+ years
-                    development experience
+                    Get trained from Industry experts having 8+ years of development experience
                   </h3>
                 </div>
                 <div className="eligibility-creteria-container">
@@ -79,7 +78,7 @@ const Home = () => {
                       target="_blank"
                     >
                       <IoIosCall className="calling-icon" />
-                      Schedule a demo
+                      Schedule a free demo
                     </Link>
                   </button>
                 </div>
@@ -124,12 +123,26 @@ const Home = () => {
                       target="_blank"
                     >
                       <IoIosCall className="calling-icon" />
-                      Schedule a demo
+                      Schedule a free demo
                     </Link>
                   </button>
                 </div>
               </div>
             </div>
+            <h2>
+              Let's get your IT career built for confidence at <strong>Career Sure Academy</strong>, the #1 CS Placement Portal in Hyderabad.
+            </h2>
+            <p>
+              Are you a fresher or graduate looking to upskill yourself in Computer science and IT, and crack the job you've always dreamed of?
+              <br/>
+              The truth is, job placements in full stack development / mobile app development don't come easy.
+              Definitely not with:
+              <ul>
+                <li>Basic college training</li>
+                <li>Reading programming books</li>
+                <li>Mindlessly grinding DSA on LeetCode</li>
+              </ul>
+            </p>
           </div>
           <Alumni />
           <Element name="companies">

@@ -13,8 +13,8 @@ const Trainers = () => {
   return (
     <div className="trainers-container">
       <h1 className="trainers-heading">
-        "Our elite teams are dedicated to guiding in programming and securing
-        you a developer Job"
+        "Our elite teams are dedicated to guide you in programming, and secure
+        you a developer job"
       </h1>
       <div className="tainers-image-container">
         <div>
@@ -54,7 +54,7 @@ const Trainers = () => {
           </div>
           <div className="traine-category-container">
             <h4 className="traine-category-heading">
-              Get doubt revolved by
+              Get doubts resolved by
               <span className="trainee-type"> Product Developers</span>
             </h4>
             <div className="divid-two-traines-wise">
@@ -113,7 +113,7 @@ const Trainers = () => {
           </div>
           <div className="traine-category-container">
             <h4 className="traine-category-heading">
-              Gain experts insights from{" "}
+              Gain expert tech insights from{" "}
               <span className="trainee-type">Masterclasses</span>
             </h4>
             <div className="divid-two-traines-wise">
@@ -152,7 +152,7 @@ const Trainers = () => {
             target="_blank"
           >
             <IoIosCall className="calling-icon" />
-            Schedule a demo
+            Schedule a free demo
           </Link>
         </button>
       </div>
