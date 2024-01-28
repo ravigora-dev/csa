@@ -25,12 +25,9 @@ const Home = () => {
           <div className="main-home-container">
             <div className="caption-container">
               <h1 className="home-heading">
-                Career Sure Academy <span className="home-heading-academy-name">Full Stack Development (ReactJS) & Mobile App Development (React Native) Course</span><br />
-                {/*<span className="home-heading-academy-name">
-                  Career Sure Academy -<br />
-  </span> */}
-                <span className="quatestion">Internship in Hyderabad with 100% Job Placements in IT</span>
+                Career Sure Academy Full Stack & Mobile App Development Course
               </h1>
+              <h2>Internship in Hyderabad with 100% Job Placements in IT</h2>
               <img
                 src={companyLogo}
                 alt="companyPhoto"
@@ -128,20 +125,25 @@ const Home = () => {
                   </button>
                 </div>
               </div>
+
+            </div>
+          </div>
+          <div className="cards-container">
+            <div>
               <h2>
-              Let's get your IT career built for confidence at <strong>Career Sure Academy</strong>, the #1 CS Placement Portal in Hyderabad.
-            </h2>
-            <p>
-              Are you a fresher or graduate looking to upskill yourself in Computer science and IT, and crack the job you've always dreamed of?
-              <br/>
-              The truth is, job placements in full stack development / mobile app development don't come easy.
-              Definitely not with:
-              <ul>
-                <li>Basic college training</li>
-                <li>Reading programming books</li>
-                <li>Mindlessly grinding DSA on LeetCode</li>
-              </ul>
-            </p>
+                Let's get your IT career built for confidence at <strong>Career Sure Academy</strong>, the #1 CS Placement Portal in Hyderabad.
+              </h2>
+              <p>
+                Are you a fresher or graduate looking to upskill yourself in Computer science and IT, and crack the job you've always dreamed of?
+                <br />
+                The truth is, job placements in full stack development / mobile app development don't come easy.
+                Definitely not with:
+                <ul>
+                  <li>Basic college training</li>
+                  <li>Reading programming books</li>
+                  <li>Mindlessly grinding DSA on LeetCode</li>
+                </ul>
+              </p>
             </div>
           </div>
           <Alumni />
