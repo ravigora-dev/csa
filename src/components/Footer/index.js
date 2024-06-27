@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-import companyLogo from "../../Images/csa.png";
+import companyLogo from "../../Images/logo/whiteicon.png";
 import upiIcon from "../../Images/payment_logos/upi-icon.svg";
 import rupayIcon from "../../Images/payment_logos/rupay-icon.svg";
 import googlepayIcon from "../../Images/payment_logos/Google_Pay_Logo.svg.png";
@@ -21,26 +21,35 @@ const Footer = () => {
           <img src={companyLogo} alt="companyLogo" className="company-logo" />
           <h4 className="footer-first-part-heading">Reach Us</h4>
 
-          <Link to="https://wa.me/+916301046346" target="_blank" className="footer-link">
-          <div className="phone-number-section">
-            <img
-              src={whatsappIcon}
-              alt="socialMediaIcon"
-              className="social-media-icon"
-            />
-            <p className="whatsup-number footer-link">+91 6301046346</p>
-          </div>
+          <Link
+            to="https://wa.me/+916301046346"
+            target="_blank"
+            className="footer-link"
+          >
+            <div className="phone-number-section">
+              <img
+                src={whatsappIcon}
+                alt="socialMediaIcon"
+                className="social-media-icon"
+              />
+              <p className="whatsup-number footer-link">+91 6301046346</p>
+            </div>
           </Link>
 
-          <Link to="mailto:contact@careersureacademy.com" className="footer-link">
-          <div className="email-section">
-            <img
-              src={emailIcon}
-              alt="socialMediaIcon"
-              className="social-media-icon"
-            />
-            <p className="company-eamil footer-link">contact@careersureacademy.com</p>
-          </div>
+          <Link
+            to="mailto:contact@careersureacademy.com"
+            className="footer-link"
+          >
+            <div className="email-section">
+              <img
+                src={emailIcon}
+                alt="socialMediaIcon"
+                className="social-media-icon"
+              />
+              <p className="company-eamil footer-link">
+                contact@careersureacademy.com
+              </p>
+            </div>
           </Link>
         </div>
         <div>
@@ -165,8 +174,10 @@ const Footer = () => {
       <hr className="row" />
       <div className="footer-middle-part">
         <div className="social-media-container">
-          <Link to="https://www.instagram.com/careersure_academy/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" 
-          target="_blank">
+          <Link
+            to="https://www.instagram.com/careersure_academy/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="
+            target="_blank"
+          >
             <img
               src={instagramIcon}
               alt="socialMediaIcon"
@@ -181,7 +192,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="copy-rights-container">
-        <p>Copyright &copy; 2019 - 2024 Career Sure Academy | All Rights Reserved</p>
+        <p>
+          Copyright &copy; 2019 - 2024 Career Sure Academy | All Rights Reserved
+        </p>
       </div>
     </div>
   );

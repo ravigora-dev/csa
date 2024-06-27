@@ -3,7 +3,7 @@ import { Element } from "react-scroll";
 import Header from "../Header";
 import academyPersonPhoto from "../../Images/students_photos/dasthigiri2.png";
 import intensivePersonPhoto from "../../Images/students_photos/navneeth.png";
-import companyLogo from "../../Images/csa.png";
+import companyLogo from "../../Images/logo/Group491.png";
 import { IoIosCall } from "react-icons/io";
 import HiredCompanies from "../HiredCompanies";
 import Alumni from "../Alumni";
@@ -50,7 +50,8 @@ const Home = () => {
                 </div>
                 <div className="academy-description-container">
                   <h3 className="academy-description">
-                    Get trained from Industry experts having 8+ years of development experience
+                    Get trained from Industry experts having 8+ years of
+                    development experience
                   </h3>
                 </div>
                 <div className="eligibility-creteria-container">
@@ -125,19 +126,22 @@ const Home = () => {
                   </button>
                 </div>
               </div>
-
             </div>
           </div>
           <div className="cards-container">
             <div>
               <h2>
-                Let's get your IT career built for confidence at <strong>Career Sure Academy</strong>, the #1 CS Placement Portal in Hyderabad.
+                Let's get your IT career built for confidence at{" "}
+                <strong>Career Sure Academy</strong>, the #1 CS Placement Portal
+                in Hyderabad.
               </h2>
               <p>
-                Are you a fresher or graduate looking to upskill yourself in Computer science and IT, and crack the job you've always dreamed of?
+                Are you a fresher or graduate looking to upskill yourself in
+                Computer science and IT, and crack the job you've always dreamed
+                of?
                 <br />
-                The truth is, job placements in full stack development / mobile app development don't come easy.
-                Definitely not with:
+                The truth is, job placements in full stack development / mobile
+                app development don't come easy. Definitely not with:
                 <ul>
                   <li>Basic college training</li>
                   <li>Reading programming books</li>
