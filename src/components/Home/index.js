@@ -25,7 +25,7 @@ const Home = () => {
           <div className="main-home-container">
             <div className="caption-container">
               <h1 className="home-heading">
-                Career Sure Academy Full Stack & Mobile App Development Course
+                C S Academy Full Stack & Mobile App Development Course
               </h1>
               <h2>Internship in Hyderabad with 100% Job Placements in IT</h2>
               <img
