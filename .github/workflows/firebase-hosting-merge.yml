@@ -28,4 +28,4 @@ jobs:
           projectId: careersureacademy
           expires: 7d
           entryPoint: .
-          firebaseToolsVersion: latest
+          firebaseToolsVersion: '13.0.0'
