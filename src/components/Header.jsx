@@ -65,8 +65,8 @@ function Header() {
           />
         </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:block mx-auto flex-grow max-w-2xl">
+        {/* Desktop Navigation - Changed to hidden for lg screens */}
+        <nav className="hidden lg:block mx-auto flex-grow max-w-2xl">
           <ul className="flex items-center justify-center gap-4">
             {[
               { id: "home", label: "Home" },
@@ -89,8 +89,8 @@ function Header() {
           </ul>
         </nav>
 
-        {/* Action Buttons (Desktop) */}
-        <div className="hidden md:flex items-center gap-3 flex-shrink-0">
+        {/* Action Buttons (Desktop) - Changed to hidden for lg screens */}
+        <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
           <button
             onClick={() => navigate("/mentor-apply")}
             className="text-gray-700 font-bold hover:text-primary px-3 py-1.5 rounded-lg transition-all text-sm hover:bg-gray-50/80 tracking-wide border border-transparent hover:border-gray-200"
@@ -113,9 +113,9 @@ function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button - Changed to show for md screens */}
         <button
-          className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF6B00]/20 hover:bg-gray-50/80 transition-all duration-300"
+          className="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF6B00]/20 hover:bg-gray-50/80 transition-all duration-300"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -147,9 +147,9 @@ function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Changed to show for md screens */}
       <div
-        className={`md:hidden bg-white/98 backdrop-blur-md border-t border-gray-100 shadow-lg transition-all duration-300 ease-in-out ${
+        className={`lg:hidden bg-white/98 backdrop-blur-md border-t border-gray-100 shadow-lg transition-all duration-300 ease-in-out ${
           mobileMenuOpen
             ? "max-h-[400px] opacity-100"
             : "max-h-0 opacity-0 overflow-hidden"
@@ -160,6 +160,7 @@ function Header() {
             {[
               { id: "home", label: "Home" },
               { id: "about", label: "About" },
+              { id: "courses", label: "Courses" },
               { id: "placements", label: "Placements" },
               { id: "contact", label: "Contact" },
             ].map(({ id, label }) => (

@@ -380,7 +380,7 @@ const StudentReels = () => {
               Why Join <span className="text-primary">Career Sure Academy</span> ?
             </h2>
             
-            <div className="space-y-4 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl p-6 border border-blue-500/20 backdrop-blur-sm">
+            <div className="space-y-1 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl p-4 border border-blue-500/20 backdrop-blur-sm">
               {whyJoinPoints.map((item) => (
                 <motion.div
                   key={item.id}
@@ -390,7 +390,7 @@ const StudentReels = () => {
                   transition={{ delay: item.id * 0.1 }}
                 >
                   <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-blue-500 group-hover:scale-150 transition-transform duration-300"></div>
-                  <p className="text-lg text-gray-300 group-hover:text-white transition-colors duration-300">
+                  <p className="text-base text-gray-300 group-hover:text-white transition-colors duration-300">
                     {item.point}
                   </p>
                 </motion.div>
@@ -583,7 +583,7 @@ const StudentReels = () => {
 
                         {/* Content Overlay */}
                         <motion.div
-                          className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent pointer-events-none"
+                          className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent pointer-events-none"
                           initial="hidden"
                           animate="visible"
                           exit="exit"
@@ -597,10 +597,10 @@ const StudentReels = () => {
                               animate="visible"
                               exit="exit"
                             >
-                              <h6 className="text-2xl font-bold text-white mb-1">
+                              <h6 className="text-xl font-bold text-white mb-1">
                                 {testimonial.name}
                               </h6>
-                              <p className="text-blue-400 font-medium">
+                              <p className="text-blue-400 font-medium text-sm">
                                 {testimonial.role} at {testimonial.company}
                               </p>
                             </motion.div>
@@ -613,7 +613,7 @@ const StudentReels = () => {
                               exit="exit"
                               transition={{ delay: 0.1 }}
                             >
-                              <span className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 rounded-full text-sm font-medium">
+                              <span className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 rounded-full text-md font-medium">
                                 <svg
                                   className="w-4 h-4 mr-2"
                                   fill="currentColor"

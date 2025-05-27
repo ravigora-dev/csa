@@ -1,80 +1,11 @@
 import React from "react";
-import {
-  Udhay,
-  Dileep,
-  Rambabu,
-  Jagadeesh,
-  Teja,
-} from "../assets/placements";
+import { placedStudents } from "../constant";
 
 export const Testimonial = () => {
-  const testimonials = [
-    {
-      id: 1,
-      name: "Udhay Kaitha",
-      role: "Software Developer",
-      company: "Multiplier AI",
-      image: Udhay,
-      testimonial:
-        "The comprehensive curriculum and hands-on projects at CSA helped me secure my dream role at Multiplier AI!",
-      rating: 5,
-      batch: "2023",
-      companyLogo:
-        "https://multiplierai.co/wp-content/uploads/2022/06/multiplier_logo.png",
-    },
-    {
-      id: 2,
-      name: "Dileep",
-      role: "Testing Engineer",
-      company: "Wipro",
-      image: Dileep,
-      testimonial:
-        "The practical training and industry exposure at CSA prepared me well for my role at Wipro.",
-      rating: 5,
-      batch: "2023",
-      companyLogo:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Wipro_new_logo.svg/330px-Wipro_new_logo.svg.png",
-    },
-    {
-      id: 3,
-      name: "Jagadeesh",
-      role: "Software Developer",
-      company: "Sconex Software",
-      image: Jagadeesh,
-      testimonial:
-        "The mentorship and project-based learning approach at CSA was instrumental in my success.",
-      rating: 5,
-      batch: "2023",
-      companyLogo:
-        "https://media.licdn.com/dms/image/v2/D560BAQFnAOeChCHW-Q/company-logo_200_200/company-logo_200_200/0/1729242362993/sconexit_logo?e=2147483647&v=beta&t=lxiLsl70uulj0KYdk2B8tj9-8jxOZQDEZ8MKkuJ62zY",
-    },
-    {
-      id: 4,
-      name: "Rambabu",
-      role: "Data Analyst",
-      company: "Nova Web Innovations",
-      image: Rambabu,
-      testimonial:
-        "CSA's data science program provided me with the perfect foundation for my career in analytics.",
-      rating: 5,
-      batch: "2023",
-      companyLogo:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png",
-    },
-    {
-      id: 5,
-      name: "Tirumala Teja",
-      role: "Software Developer",
-      company: "Kapil Technogles",
-      image: Teja,
-      testimonial:
-        "The industry-relevant curriculum and placement support at CSA helped me land my first tech role.",
-      rating: 5,
-      batch: "2023",
-      companyLogo:
-        "https://kcs-tech.com/static/media/ptkcs%20logo%20png%20total.cf3b714d11854610e992.png",
-    },
-  ];
+  const testimonials = placedStudents.map(student => ({
+    ...student,
+    rating: 5 // Adding rating for the testimonial cards
+  }));
 
   return (
     <>
@@ -133,7 +64,7 @@ export const Testimonial = () => {
                       </div>
                     </div>
                   </div>
-                  <p className="text-gray-600 italic text-sm mb-4 line-clamp-3">
+                  <p className="text-gray-600 italic text-sm mb-4 line-clamp-4">
                     "{testimonial.testimonial}"
                   </p>
                   <div className="flex items-center justify-between mt-auto pt-3 border-t border-gray-100">
@@ -149,9 +80,6 @@ export const Testimonial = () => {
                         {testimonial.company}
                       </span>
                     </div>
-                    <span className="text-gray-500 text-xs">
-                      {testimonial.batch}
-                    </span>
                   </div>
                 </div>
               ))}
@@ -207,7 +135,7 @@ export const Testimonial = () => {
         }
 
         .animate-scroll {
-          animation: scroll 30s linear infinite;
+          animation: scroll 60s linear infinite;
         }
 
         .animate-scroll:hover {

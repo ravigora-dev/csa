@@ -273,7 +273,13 @@ function QuoteForm({
             Enrollment <span className="text-primary">Form</span>
           </h2>
           <p className="text-gray-600 text-sm">
-            Fill in your details and our team will reach out to you
+            {downloadType || courseToDownload ? (
+              "Fill in your details to download the syllabus."
+            ) : postSubmitDownloadType === "brochure" ? (
+              "Fill in your details to download the brochure."
+            ) : (
+              "Fill in your details and our team will reach out to you"
+            )}
           </p>
         </div>
         <div className="space-y-5">
