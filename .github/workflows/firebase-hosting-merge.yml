@@ -1,16 +1,16 @@
 # .github/workflows/firebase-hosting.yml
 
 name: Deploy to Firebase Hosting on merge
-'on':
+"on":
   push:
     branches:
       - master
 
 permissions:
-  contents: 'read'
-  id-token: 'write'
-  checks: 'write'
-  deployments: 'write'
+  contents: "read"
+  id-token: "write"
+  checks: "write"
+  deployments: "write"
 
 jobs:
   build_and_deploy:
@@ -20,7 +20,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Set up environment variables
         env:
@@ -31,6 +31,8 @@ jobs:
           VITE_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.VITE_FIREBASE_MESSAGING_SENDER_ID }}
           VITE_FIREBASE_APP_ID: ${{ secrets.VITE_FIREBASE_APP_ID }}
           VITE_FIREBASE_MEASUREMENT_ID: ${{ secrets.VITE_FIREBASE_MEASUREMENT_ID }}
+          VITE_ADMIN_EMAIL: ${{ secrets.VITE_ADMIN_EMAIL }}
+          VITE_API_URL: ${{ secrets.VITE_API_URL }}
         run: |
           echo "VITE_FIREBASE_API_KEY=$VITE_FIREBASE_API_KEY" >> $GITHUB_ENV
           echo "VITE_FIREBASE_AUTH_DOMAIN=$VITE_FIREBASE_AUTH_DOMAIN" >> $GITHUB_ENV
@@ -39,6 +41,8 @@ jobs:
           echo "VITE_FIREBASE_MESSAGING_SENDER_ID=$VITE_FIREBASE_MESSAGING_SENDER_ID" >> $GITHUB_ENV
           echo "VITE_FIREBASE_APP_ID=$VITE_FIREBASE_APP_ID" >> $GITHUB_ENV
           echo "VITE_FIREBASE_MEASUREMENT_ID=$VITE_FIREBASE_MEASUREMENT_ID" >> $GITHUB_ENV
+          echo "VITE_ADMIN_EMAIL=$VITE_ADMIN_EMAIL" >> $GITHUB_ENV
+          echo "VITE_API_URL=$VITE_API_URL" >> $GITHUB_ENV
 
       - name: Install dependencies
         run: npm ci
@@ -53,11 +57,13 @@ jobs:
           VITE_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.VITE_FIREBASE_MESSAGING_SENDER_ID }}
           VITE_FIREBASE_APP_ID: ${{ secrets.VITE_FIREBASE_APP_ID }}
           VITE_FIREBASE_MEASUREMENT_ID: ${{ secrets.VITE_FIREBASE_MEASUREMENT_ID }}
+          VITE_ADMIN_EMAIL: ${{ secrets.VITE_ADMIN_EMAIL }}
+          VITE_API_URL: ${{ secrets.VITE_API_URL }}
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CAREERSUREACADEMY }}'
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_CAREERSUREACADEMY }}"
           channelId: live
           projectId: careersureacademy
           expires: 7d
