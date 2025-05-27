@@ -20,6 +20,7 @@ import { Nova } from "../assets/company_Logos";
 
 const TopPlacements = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -164,11 +165,14 @@ const TopPlacements = () => {
               style={{ minHeight: "100%" }}
             >
               <div
-                className="inline-flex scroll-left whitespace-nowrap gap-4 md:gap-5 py-4 px-1 md:px-2"
+                className="inline-flex whitespace-nowrap gap-4 md:gap-5 py-4 px-1 md:px-2"
                 style={{
                   minHeight: "100%",
-                  animation: "scroll 40s linear infinite"
+                  animation: "scroll 40s linear infinite",
+                  animationPlayState: isPaused ? "paused" : "running"
                 }}
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
               >
                 {/* First set of cards */}
                 {topPlacements.map((profile) => (
@@ -323,11 +327,18 @@ const TopPlacements = () => {
           </div>
 
           {/* Additional CSS for hover pause */}
-          <style jsx>{`
-            .scroll-left:hover {
-              animation-play-state: paused;
-            }
-          `}</style>
+          <style>
+            {`
+              @keyframes scroll {
+                0% {
+                  transform: translateX(0);
+                }
+                100% {
+                  transform: translateX(-50%);
+                }
+              }
+            `}
+          </style>
 
           {/* Stats Section */}
           {isLoaded && (
@@ -421,16 +432,3 @@ const TopPlacements = () => {
 };
 
 export default TopPlacements;
-
-<style>
-{`
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-`}
-</style>

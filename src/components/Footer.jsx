@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import Logo from "../assets/csa_Logo.png";
+import Logo from "../assets/csa_FaviconRound.png";
 
 function Footer() {
   const navigate = useNavigate();
@@ -47,15 +47,15 @@ function Footer() {
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
           {/* Company Info */}
-          <div>
+          <div className="">
             <button 
               onClick={(e) => handleLinkClick(e, "home")}
-              className="flex items-center flex-shrink-0 hover:opacity-80 transition-opacity"
+              className="flex items-center justify-center flex-shrink-0 hover:opacity-80 transition-opacity p-2"
             >
               <img
                 src={Logo}
                 alt="CareerSure Academy Logo"
-                className="h-10 w-auto"
+                className="h-20 w-auto"
               />
             </button>
             <p className="text-gray-400 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base max-w-xl">

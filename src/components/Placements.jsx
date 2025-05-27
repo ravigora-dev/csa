@@ -1,22 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { placedStudents } from "../constant";
-import {
-  Udhay,
-  Teja,
-  Rambabu,
-  Dileep,
-  Jagadeesh,
-  Rushikesh,
-  Shahil,
-  Vinay,
-  Nikhil,
-  Navneeth,
-  Sachin,
-  Dasthagiri,
-  Archana,
-} from "../assets/placements";
-import { Nova } from "../assets/company_Logos";
 
 function Placements() {
   const navigate = useNavigate();
@@ -28,9 +12,7 @@ function Placements() {
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-4">
             <span className="text-gray-900">Our </span>
-            <span className="text-primary">
-              Success Stories
-            </span>
+            <span className="text-primary">Success Stories</span>
           </h2>
         </div>
 
