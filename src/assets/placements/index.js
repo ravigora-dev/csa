@@ -1,0 +1,13 @@
+export { default as Udhay } from "./udhay.png";
+export { default as Teja } from "./teja.png";
+export { default as Rambabu } from "./rambabu.png";
+export { default as Dileep } from "./dileep.png";
+export { default as Jagadeesh } from "./jagadeesh.png";
+export { default as Rushikesh } from "./rushikesh.png";
+export { default as Shahil } from "./shahil.png";
+export { default as Vinay } from "./vinay.png";
+export { default as Nikhil } from "./nikhil.png";
+export { default as Navneeth } from "./navneeth.png";
+export { default as Sachin } from "./sachin.png";
+export { default as Dasthagiri } from "./dasthagiri.png";
+export { default as Archana } from "./archana.png";

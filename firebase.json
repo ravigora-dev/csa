@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "careersureacademy",
-    "public": "build",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
