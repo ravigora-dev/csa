@@ -16,11 +16,11 @@ const Courses = () => {
 
   const handleDownloadSyllabus = (course) => {
     // Navigate to EnrollPage with state for download
-    navigate("/enroll", { 
-      state: { 
+    navigate("/enroll", {
+      state: {
         downloadType: "syllabus",
-        courseToDownload: course 
-      }
+        courseToDownload: course,
+      },
     });
   };
 
@@ -34,7 +34,7 @@ const Courses = () => {
       title: "MERN Full Stack with AI",
       description:
         "Master modern web development with MongoDB, Express.js, React.js, and Node.js",
-      price: "₹40,000",
+      price: "₹30,000",
       score: 4.8,
       features: [
         "Build full-stack applications from scratch",
@@ -71,7 +71,7 @@ const Courses = () => {
       title: "Java Full Stack with AI",
       description:
         "Enterprise-grade development with Java, Spring Boot, and MySQL",
-      price: "₹40,000",
+      price: "₹30,000",
       score: 4.6,
       features: [
         "Enterprise application development",
@@ -105,7 +105,7 @@ const Courses = () => {
       title: "Python Full Stack with AI",
       description:
         "Modern Python development with Django, React, and PostgreSQL",
-      price: "₹40,000",
+      price: "₹30,000",
       score: 4.5,
       features: [
         "Python programming mastery",
@@ -140,7 +140,10 @@ const Courses = () => {
   ];
 
   return (
-    <div id="courses" className="mt-12 md:mt-16 mb-12 md:mb-16 relative px-4 sm:px-6 lg:px-8">
+    <div
+      id="courses"
+      className="mt-12 md:mt-16 mb-12 md:mb-16 relative px-4 sm:px-6 lg:px-8"
+    >
       {/* Section Header */}
       <div className="text-center mb-8 md:mb-12">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
@@ -253,17 +256,12 @@ const Courses = () => {
               <div className="flex items-center justify-between border-t border-gray-100 pt-3 sm:pt-4 mt-auto">
                 <div>
                   <div className="flex items-center gap-1 sm:gap-2">
-                    <span className="text-base sm:text-lg line-through text-gray-400">
-                      {course.price}
-                    </span>
+                    <span className="text-sm sm:text-lg line-through text-gray-400">40,000</span>
                     <span className="text-lg sm:text-xl font-bold text-gray-900">
-                      ₹30,000
+                      {course.price}
                     </span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <span className="text-xs text-green-600 font-medium">
-                      25% off
-                    </span>
                     <span className="text-xs text-gray-500">
                       • More discounts available
                     </span>
@@ -303,7 +301,7 @@ const Courses = () => {
       </div>
 
       {/* Course Statistics */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mt-12 sm:mt-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mt-12 sm:mt-16 px-4 sm:px-6 lg:px-8">
         <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-3 sm:p-4 md:p-6 text-center border border-gray-700/50 transform hover:scale-105 transition-all duration-300">
           <div className="text-xl sm:text-2xl md:text-3xl font-bold text-orange-400 mb-1 sm:mb-2">
             15+
@@ -324,13 +322,17 @@ const Courses = () => {
           <div className="text-xl sm:text-2xl md:text-3xl font-bold text-orange-400 mb-1 sm:mb-2">
             24/7
           </div>
-          <p className="text-gray-400 text-xs sm:text-sm md:text-base">Mentor Support</p>
+          <p className="text-gray-400 text-xs sm:text-sm md:text-base">
+            Mentor Support
+          </p>
         </div>
         <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-3 sm:p-4 md:p-6 text-center border border-gray-700/50 transform hover:scale-105 transition-all duration-300">
           <div className="text-xl sm:text-2xl md:text-3xl font-bold text-orange-400 mb-1 sm:mb-2">
             1:1
           </div>
-          <p className="text-gray-400 text-xs sm:text-sm md:text-base">Career Guidance</p>
+          <p className="text-gray-400 text-xs sm:text-sm md:text-base">
+            Career Guidance
+          </p>
         </div>
       </div>
 

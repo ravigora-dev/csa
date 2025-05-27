@@ -165,7 +165,10 @@ const TopPlacements = () => {
             >
               <div
                 className="inline-flex scroll-left whitespace-nowrap gap-4 md:gap-5 py-4 px-1 md:px-2"
-                style={{ minHeight: "100%" }}
+                style={{
+                  minHeight: "100%",
+                  animation: "scroll 40s linear infinite"
+                }}
               >
                 {/* First set of cards */}
                 {topPlacements.map((profile) => (
@@ -399,16 +402,17 @@ const TopPlacements = () => {
             >
               Kick Start Your Journey &rarr;
             </button>
-            <button
-              className="w-full font-bold py-3 rounded-lg shadow-lg bg-gradient-to-r from-primary to-primary-light text-white hover:-translate-y-1 hover:shadow-xl transition-all"
-              onClick={() =>
-                navigate("/enroll", {
-                  state: { postSubmitDownloadType: "brochure" },
-                })
-              }
-            >
-              Download Brochure
-            </button>
+            {/* Download Brochure Button */}
+              <button
+                className="w-full font-bold py-3 rounded-lg shadow-lg bg-gradient-to-r from-primary to-primary-light text-white hover:-translate-y-1 hover:shadow-xl transition-all"
+                onClick={() =>
+                  navigate("/enroll", {
+                    state: { postSubmitDownloadType: "brochure" },
+                  })
+                }
+              >
+                Download Brochure
+              </button>
           </div>
         </div>
       </div>
@@ -417,3 +421,16 @@ const TopPlacements = () => {
 };
 
 export default TopPlacements;
+
+<style>
+{`
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+`}
+</style>
