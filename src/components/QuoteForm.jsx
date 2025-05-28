@@ -20,22 +20,6 @@ if (!ADMIN_EMAIL) {
   );
 }
 
-const courses = [
-  "Web Development",
-  "Data Science",
-  "Mobile App Development",
-  "Cloud Computing",
-];
-
-const educationLevels = [
-  "High School",
-  "Diploma",
-  "Bachelor's Degree",
-  "Master's Degree",
-  "PhD",
-  "Other",
-];
-
 const statusOptions = ["Student", "Working Professional", "Fresher", "Other"];
 
 function QuoteForm({
