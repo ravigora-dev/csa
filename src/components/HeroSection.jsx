@@ -11,6 +11,7 @@ import GetInTouch from "./GetInTouch";
 import CareerAdvisorModal from "./CareerAdvisorModal";
 import RoadmapSection from "./RoadmapSection";
 import StudentReels from "./StudentReels";
+import GoogleReviews from "./GoogleReviews";
 
 function HeroSection() {
   const [showAdvisorModal, setShowAdvisorModal] = useState(false);
@@ -246,7 +247,8 @@ function HeroSection() {
         <ExpertTrainers />
         <Courses />
         <Testimonial />
-        <FAQs />.
+        <GoogleReviews />
+        <FAQs />
         <AboutUs />
         <GetInTouch />
       </div>
