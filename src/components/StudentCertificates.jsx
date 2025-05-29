@@ -6,53 +6,60 @@ import {
   Teja,
 } from "../assets/student_Certificate";
 import { motion, AnimatePresence } from "framer-motion";
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
-import { FaTrophy, FaMedal, FaAward, FaRibbon } from "react-icons/fa";
-import Logo from "../assets/csa_FaviconRound.png";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const StudentCertificates = () => {
-  const certificates = [
-    {
-      id: 1,
-      studentName: "Gurucharan",
-      imagePath: Gurucharan,
-      role: "Full Stack Developer",
-      achievement: "Top Performer",
-    },
-    {
-      id: 2,
-      studentName: "Archana",
-      imagePath: Archana,
-      role: "UI/UX Designer",
-      achievement: "Best Design",
-    },
-    {
-      id: 3,
-      studentName: "Udhay",
-      imagePath: Udhay,
-      role: "Backend Developer",
-      achievement: "Excellence Award",
-    },
-    {
-      id: 4,
-      studentName: "Teja",
-      imagePath: Teja,
-      role: "Frontend Developer",
-      achievement: "Outstanding Project",
-    },
-  ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
   useEffect(() => {
     const timer =
       !isHovered &&
       setInterval(() => {
         setCurrentIndex((prev) => (prev + 1) % certificates.length);
-      }, 5000);
+      }, 12000);
     return () => clearInterval(timer);
-  }, [isHovered, certificates.length]);
+  }, [isHovered]);
+
+  const certificates = [
+    {
+      id: 1,
+      studentName: "Gurucharan",
+      imagePath: Gurucharan,
+      role: "Software Tester",
+      testimonial:
+        "The hands-on projects and mentorship at Career Sure Academy were crucial for my success",
+    },
+    {
+      id: 2,
+      studentName: "Archana",
+      imagePath: Archana,
+      role: "Software Developer",
+      testimonial:
+        "The comprehensive training and mentorship at Career Sure Academy helped me secure my role at V&V Technologies.",
+    },
+    {
+      id: 3,
+      studentName: "Udhay",
+      imagePath: Udhay,
+      role: "Backend Developer",
+      testimonial:
+        "The comprehensive curriculum and hands-on projects at Career Sure Academy helped me secure my dream role at Multiplier AI!x",
+    },
+    {
+      id: 4,
+      studentName: "Teja",
+      imagePath: Teja,
+      role: "Software Tester",
+      testimonial:
+        "The industry-relevant curriculum and placement support at Career Sure Academy helped me land my first tech role.",
+    },
+  ];
 
   const navigate = (direction) => {
     setCurrentIndex((prev) => {
@@ -63,163 +70,207 @@ const StudentCertificates = () => {
     });
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+        when: "beforeChildren",
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const childVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7 },
+    },
+  };
+
   return (
-    <section className="relative py-10 bg-gradient-to-b from-gray-50 to-white">
-      {/* Subtle grid background */}
+    <div className="relative py-10 flex items-center bg-gradient-to-b from-white to-gray-800/100">
+      {/* Subtle Dot Pattern Background */}
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage:
-            "linear-gradient(to right, rgba(0, 0, 0, 0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 1px, transparent 1px)",
-          backgroundSize: "48px 48px",
+          backgroundImage: `
+            radial-gradient(#ff6b00 0.5px, transparent 0.5px), 
+            radial-gradient(#ff6b00 0.5px, transparent 0.5px)
+          `,
+          backgroundSize: "20px 20px",
+          backgroundPosition: "0 0, 10px 10px",
+          opacity: "0.02",
         }}
-      ></div>
+      />
 
-      {/* Additional subtle diagonal lines */}
-      <div
-        className="absolute inset-0"
+      {/* Professional Background Pattern */}
+      <motion.div
+        className="absolute inset-0 opacity-[0.015]"
+        animate={{
+          backgroundPosition: ["0% 0%", "100% 100%"],
+        }}
+        transition={{
+          duration: 90,
+          ease: "linear",
+          repeat: Infinity,
+        }}
         style={{
-          backgroundImage:
-            "linear-gradient(45deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px)",
-          backgroundSize: "96px 96px",
+          backgroundImage: `
+            radial-gradient(circle at 0% 0%, transparent 50%, #ff6b00 50.5%, #ff6b00 51%, transparent 51.5%),
+            radial-gradient(circle at 100% 100%, transparent 50%, #ff6b00 50.5%, #ff6b00 51%, transparent 51.5%),
+            linear-gradient(45deg, transparent 40%, #ff6b00 40.5%, #ff6b00 41%, transparent 41.5%),
+            linear-gradient(-45deg, transparent 40%, #ff6b00 40.5%, #ff6b00 41%, transparent 41.5%)
+          `,
+          backgroundSize: "60px 60px",
+          backgroundPosition: "0px 0px",
         }}
-      ></div>
+      />
 
-      <div className="relative max-w-7xl mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Our <span className="text-primary">Success</span> Stories
+      <motion.div
+        className="relative w-full"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isLoaded ? "visible" : "hidden"}
+      >
+        {/* Professional Header Section */}
+        <motion.div
+          variants={childVariants}
+          className="text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-14"
+        >
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 tracking-tight leading-tight">
+            Our{" "}
+            <span className="text-primary relative inline-block">
+              Graduates
+              <motion.span
+                className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-primary/0 via-primary to-primary/0"
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              />
+            </span>{" "}
+            Making Impact
           </h2>
-          <p className="text-gray-600 font-semibold text-lg max-w-2xl mx-auto leading-relaxed">
-            Celebrating the <span className="text-primary">achievements</span>{" "}
-            of our exceptional graduates who are making their mark in the tech
-            industry
+          <p className="text-gray-600 font-semibold text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
+            Celebrating the achievements of our alumni who are transforming the
+            tech industry
           </p>
-        </div>
+        </motion.div>
 
-        {/* Main Content */}
-        <div className="max-w-xl mx-auto rounded-lg">
+        {/* Certificate Showcase Container */}
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative flex items-center justify-center">
-            {/* Left Navigation */}
+            {/* Navigation Buttons */}
             <motion.button
-              onClick={() => navigate("prev")}
-              whileHover={{ scale: 1.1, backgroundColor: "#fff" }}
+              whileHover={{ scale: 1.05, x: -2 }}
               whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2 }}
-              className="absolute -left-7 w-14 h-14 flex items-center justify-center rounded-full bg-white shadow-xl hover:shadow-2xl text-primary hover:text-primary/80 transition-all border-2 border-primary/20 hover:border-primary"
+              onClick={() => navigate("prev")}
+              className="absolute left-0 sm:left-2 -translate-x-full w-12 h-12 flex items-center justify-center rounded-full bg-white hover:bg-primary text-primary hover:text-white transition-all z-10 shadow-lg border border-gray-200 hover:border-primary/60 group"
               aria-label="Previous"
             >
-              <BsArrowLeft size={24} className="transform translate-x-[-2px]" />
+              <IoIosArrowBack className="w-6 h-6 transition-transform group-hover:-translate-x-0.5" />
             </motion.button>
 
-            {/* Certificate Card */}
-            <div
-              className="w-full max-w-sm mx-auto bg-black p-2 border border-gray-200 rounded-lg relative overflow-hidden"
+            <motion.div
+              variants={childVariants}
+              className="w-full bg-[#111111] backdrop-blur-sm rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.12)] p-8 sm:p-10 relative overflow-hidden border border-gray-800"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
-              {/* Large Trophy Background */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-20">
-                <FaTrophy className="w-48 h-48 text-primary" />
-              </div>
-
-              {/* Decorative Badge Elements */}
-              <div className="absolute top-0 left-0 w-24 h-24">
-                <FaRibbon className="absolute top-2 left-2 w-6 h-6 text-primary/30 transform -rotate-45" />
-              </div>
-              <div className="absolute top-0 right-0 w-24 h-24">
-                <FaRibbon className="absolute top-2 right-2 w-6 h-6 text-primary/30 transform rotate-45" />
-              </div>
-              <div className="absolute bottom-0 left-0 w-24 h-24">
-                <FaRibbon className="absolute bottom-2 left-2 w-6 h-6 text-primary/30 transform rotate-[-135deg]" />
-              </div>
-              <div className="absolute bottom-0 right-0 w-24 h-24">
-                <FaRibbon className="absolute bottom-2 right-2 w-6 h-6 text-primary/30 transform rotate-[135deg]" />
-              </div>
-
               <AnimatePresence mode="wait">
                 {certificates.map(
                   (certificate, index) =>
                     index === currentIndex && (
                       <motion.div
                         key={certificate.id}
-                        initial={{ opacity: 0, scale: 0.98 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.98 }}
-                        transition={{
-                          duration: 0.4,
-                          ease: "easeOut",
-                        }}
-                        className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 relative"
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -20 }}
+                        transition={{ duration: 0.6 }}
+                        className="relative"
                       >
-                        <motion.div
-                          className="aspect-square relative mb-6 rounded-lg overflow-hidden shadow-md"
-                          whileHover={{ scale: 1.01 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <img
-                            src={certificate.imagePath}
-                            alt={`${certificate.studentName}'s Certificate`}
-                            className="w-full h-full object-cover"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-
-                          {/* Award Icon */}
-                          <div className="absolute bottom-2 right-2 bg-white/90 p-2 rounded-full shadow-md">
-                            <FaAward className="w-4 h-4 text-primary" />
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
+                          {/* Certificate Image */}
+                          <div className="relative rounded-xl overflow-hidden shadow-2xl w-full bg-white aspect-[4/3] sm:aspect-[3/2] border border-gray-200 group">
+                            <motion.div
+                              className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-40"
+                              whileHover={{ opacity: 0.6 }}
+                              transition={{ duration: 0.3 }}
+                            />
+                            <motion.img
+                              src={certificate.imagePath}
+                              alt={`${certificate.studentName}'s Certificate`}
+                              className="w-full h-full object-contain rounded-xl p-4"
+                              whileHover={{ scale: 1.02 }}
+                              transition={{ duration: 0.4 }}
+                            />
                           </div>
-                        </motion.div>
 
-                        <motion.div
-                          className="text-center"
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          transition={{ duration: 0.5, delay: 0.2 }}
-                        >
-                          <h3 className="text-xl font-bold text-gray-900 mb-2">
-                            {certificate.studentName}
-                          </h3>
-                        </motion.div>
+                          {/* Content Section */}
+                          <div className="flex flex-col justify-center space-y-6 p-3">
+                            <motion.div
+                              initial={{ opacity: 0, y: 20 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.5, delay: 0.2 }}
+                              className="space-y-6"
+                            >
+                              <div className="space-y-4">
+                                <div className="flex items-center gap-3 mb-2"></div>
+                                <motion.h3 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+                                  {certificate.studentName}
+                                </motion.h3>
+                                <motion.p className="text-xl text-primary font-medium tracking-wide">
+                                  {certificate.role}
+                                </motion.p>
+                                <motion.p className="text-lg text-gray-300 leading-relaxed">
+                                  "{certificate.testimonial}"
+                                </motion.p>
+                              </div>
+                            </motion.div>
+                          </div>
+                        </div>
                       </motion.div>
                     )
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
 
-            {/* Right Navigation */}
             <motion.button
-              onClick={() => navigate("next")}
-              whileHover={{ scale: 1.1, backgroundColor: "#fff" }}
+              whileHover={{ scale: 1.05, x: 2 }}
               whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2 }}
-              className="absolute -right-7 w-14 h-14 flex items-center justify-center rounded-full bg-white shadow-xl hover:shadow-2xl text-primary hover:text-primary/80 transition-all border-2 border-primary/20 hover:border-primary"
+              onClick={() => navigate("next")}
+              className="absolute right-0 sm:right-2 translate-x-full w-12 h-12 flex items-center justify-center rounded-full bg-white hover:bg-primary text-primary hover:text-white transition-all z-10 shadow-lg border border-gray-200 hover:border-primary/60 group"
               aria-label="Next"
             >
-              <BsArrowRight size={24} className="transform translate-x-[2px]" />
+              <IoIosArrowForward className="w-6 h-6 transition-transform group-hover:translate-x-0.5" />
             </motion.button>
           </div>
 
-          {/* Dots Navigation */}
-          <div className="flex justify-center items-center gap-3 mt-10">
+          {/* Professional Pagination Dots */}
+          <div className="flex justify-center items-center gap-3 mt-12 mb-4">
             {certificates.map((_, idx) => (
               <motion.button
                 key={idx}
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => setCurrentIndex(idx)}
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.2 }}
-                className={`transition-all ${
+                className={`transition-all duration-300 ${
                   idx === currentIndex
-                    ? "w-8 h-1.5 bg-primary rounded-full"
-                    : "w-1.5 h-1.5 bg-gray-400 hover:bg-gray-500 rounded-full"
+                    ? "w-10 h-1.5 bg-primary shadow-[0_0_12px_rgba(255,107,0,0.3)] rounded-full"
+                    : "w-2 h-2 bg-gray-300 hover:bg-primary/40 rounded-full"
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
             ))}
           </div>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </div>
   );
 };
 
