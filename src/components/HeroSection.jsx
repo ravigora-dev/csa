@@ -243,11 +243,11 @@ function HeroSection() {
         <TopPlacements />
         <StudentReels />
         <CompaniesHire />
+        <GoogleReviews />
         <RoadmapSection />
         <ExpertTrainers />
         <Courses />
         <Testimonial />
-        <GoogleReviews />
         <FAQs />
         <AboutUs />
         <GetInTouch />

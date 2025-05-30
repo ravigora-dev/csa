@@ -128,7 +128,7 @@ const RoadmapSection = () => {
   }, [isScrollingDown]);
 
   return (
-    <section className="bg-gradient-to-b from-white to-gray-50 mt-10 py-8 sm:py-12 lg:py-16">
+    <section className="bg-gradient-to-b from-white to-gray-50 py-8 sm:py-12 lg:py-16">
       <div className="max-w-8xl mx-auto">
         {/* Learning Process Section */}
         <div className="md:p-12 text-center bg-gray-900 text-white px-4 sm:px-6 py-8 sm:py-12">
