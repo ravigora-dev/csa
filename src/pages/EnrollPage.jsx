@@ -8,7 +8,7 @@ const EnrollPage = () => {
     location.state || {};
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-start py-12 pt-18 bg-gradient-to-br from-orange-50 via-white to-orange-50">
+    <div className="relative min-h-screen flex flex-col items-center justify-start py-12 pt-4 bg-gradient-to-br from-orange-50 via-white to-orange-50">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-16 -left-16 w-64 h-64 bg-gradient-to-br from-orange-200 to-orange-100 rounded-full opacity-20 blur-3xl"></div>

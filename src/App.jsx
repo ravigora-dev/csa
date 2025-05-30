@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import PlacementsPage from "./pages/PlacementsPage";
@@ -10,11 +10,41 @@ import FloatingWhatsAppButton from "./components/FloatingWhatsAppButton";
 import MentorApply from "./components/MentorApply";
 
 function App() {
+  const [showBanner, setShowBanner] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      const scrollThreshold = 10; // Small threshold to detect when near top
+      
+      // Only show banner when we're at the top of the page
+      if (currentScrollPos < scrollThreshold) {
+        setShowBanner(true);
+      } else {
+        setShowBanner(false);
+      }
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    const handleBannerClose = () => {
+      setShowBanner(false);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('referralBannerClosed', handleBannerClose);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('referralBannerClosed', handleBannerClose);
+    };
+  }, [prevScrollPos]);
+
   return (
     <Router>
       <div className="min-h-screen bg-white font-sans">
         <Header />
-        <main>
+        <main className={`transition-all duration-300 ${showBanner ? "pt-[106px]" : "pt-[64px]"}`}>
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<HomePage />} />

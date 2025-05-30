@@ -233,7 +233,7 @@ function HeroSection() {
   }, []);
 
   return (
-    <section id="home" className="pt-16 bg-gradient-to-b from-white to-gray-50">
+    <section id="home" className="pt-4 bg-gradient-to-b from-white to-gray-50">
       {/* Career Advisor Modal */}
       <CareerAdvisorModal
         isOpen={showAdvisorModal}
