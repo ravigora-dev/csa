@@ -1,7 +1,6 @@
 import React from "react";
 import QuoteForm from "../components/QuoteForm";
 import { useLocation } from "react-router-dom";
-import AcademyCarousel from "../components/AcademyCarousel";
 
 const EnrollPage = () => {
   const location = useLocation();
