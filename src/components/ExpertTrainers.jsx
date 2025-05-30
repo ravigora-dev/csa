@@ -52,7 +52,7 @@ const trainers = [
 
 const ExpertTrainers = () => {
   return (
-    <div className="mt-16 mb-16 relative px-6">
+    <div className="mt-8 mb-16 relative px-6">
       {/* Section Header */}
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">

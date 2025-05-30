@@ -170,7 +170,7 @@ const StudentCertificates = () => {
               whileHover={{ scale: 1.05, x: -2 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => navigate("prev")}
-              className="absolute left-0 sm:left-2 -translate-x-full w-12 h-12 flex items-center justify-center rounded-full bg-white hover:bg-primary text-primary hover:text-white transition-all z-10 shadow-lg border border-gray-200 hover:border-primary/60 group"
+              className="absolute left-0 sm:left-2 w-12 h-12 flex items-center justify-center rounded-full bg-white hover:bg-primary text-primary hover:text-white transition-all z-10 shadow-lg border border-gray-200 hover:border-primary/60 group -ml-2"
               aria-label="Previous"
             >
               <IoIosArrowBack className="w-6 h-6 transition-transform group-hover:-translate-x-0.5" />
@@ -244,7 +244,7 @@ const StudentCertificates = () => {
               whileHover={{ scale: 1.05, x: 2 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => navigate("next")}
-              className="absolute right-0 sm:right-2 translate-x-full w-12 h-12 flex items-center justify-center rounded-full bg-white hover:bg-primary text-primary hover:text-white transition-all z-10 shadow-lg border border-gray-200 hover:border-primary/60 group"
+              className="absolute right-0 sm:right-2 w-12 h-12 flex items-center justify-center rounded-full bg-white hover:bg-primary text-primary hover:text-white transition-all z-10 shadow-lg border border-gray-200 hover:border-primary/60 group -mr-2"
               aria-label="Next"
             >
               <IoIosArrowForward className="w-6 h-6 transition-transform group-hover:translate-x-0.5" />

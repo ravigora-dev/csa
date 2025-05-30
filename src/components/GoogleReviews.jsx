@@ -68,7 +68,7 @@ const GoogleReviews = () => {
                   <img
                     src={review.imagePath}
                     alt={review.alt}
-                    className="w-full h-auto max-h-[300px] object-contain rounded-lg shadow-sm"
+                    className="w-72 h-72 object-contain rounded-lg shadow-sm mx-auto bg-white"
                     loading="lazy"
                   />
                 </div>
