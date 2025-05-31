@@ -55,7 +55,7 @@ const StudentCertificates = () => {
       id: 4,
       studentName: "Teja",
       imagePath: Teja,
-      role: "Software Tester",
+      role: "Software Developer",
       testimonial:
         "The industry-relevant curriculum and placement support at Career Sure Academy helped me land my first tech role.",
     },
