@@ -274,7 +274,7 @@ const Courses = () => {
                     onClick={() => handleLearnMore(course)}
                     className="px-3 sm:px-4 py-1.5 sm:py-2 bg-orange-500 text-white text-xs sm:text-sm font-medium rounded-lg hover:bg-orange-600 transition-all duration-300"
                   >
-                    Learn More
+                    More Details
                   </button>
                   <button
                     onClick={() => handleDownloadSyllabus(course)}
