@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import FloatingWhatsAppButton from "./components/FloatingWhatsAppButton";
 import MentorApply from "./components/MentorApply";
+import BookDemoButton from "./components/BookDemoButton";
 
 function App() {
   const [showBanner, setShowBanner] = useState(true);
@@ -54,6 +55,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <BookDemoButton />
         <FloatingWhatsAppButton />
       </div>
     </Router>
