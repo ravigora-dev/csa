@@ -11,9 +11,10 @@ import {
   Sachin,
   Rushikesh,
   Shahil,
-  Archana
-} from "./assets/placements";
-import { Nova } from "./assets/company_Logos";
+  Archana,
+  GuruCharan,
+} from "../assets/placements";
+import { Nova } from "../assets/company_Logos";
 
 export const placedStudents = [
   {
@@ -142,6 +143,20 @@ export const placedStudents = [
       "Career Sure Academy's full stack program provided me with the perfect foundation for my career.",
   },
   {
+    id: 13,
+    name: "Archana Vusa",
+    role: "Software Developer",
+    company: "V&V Technologies",
+    package: "₹4 LPA",
+    image: Archana,
+    companyLogo:
+      "https://vandvtechnologies.com/wp-content/uploads/2022/04/cropped-vv-photo.png",
+    course: "Full Stack Development",
+    batch: "2023",
+    testimonial:
+      "The comprehensive training and mentorship at Career Sure Academy helped me secure my role at V&V Technologies.",
+  },
+  {
     id: 10,
     name: "Tirumala Teja",
     role: "Software Developer",
@@ -184,17 +199,16 @@ export const placedStudents = [
       "Career Sure Academy's comprehensive training program helped me transition into a successful software developer role.",
   },
   {
-    id: 13,
-    name: "Archana Vusa",
-    role: "Software Developer",
-    company: "V&V Technologies",
-    package: "₹4 LPA",
-    image: Archana,
-    companyLogo:
-      "https://vandvtechnologies.com/wp-content/uploads/2022/04/cropped-vv-photo.png",
+    id: 14,
+    name: "Barenkala Guru Charan",
+    role: "Software Tester",
+    company: "Amplelogic",
+    package: "₹3 LPA",
+    image: GuruCharan,
+    companyLogo: Nova,
     course: "Full Stack Development",
     batch: "2023",
     testimonial:
-      "The comprehensive training and mentorship at Career Sure Academy helped me secure my role at V&V Technologies.",
+      "The practical training and mentorship at Career Sure Academy played a key role in helping me start my journey as a Software Tester at Amplelogic.",
   },
 ];

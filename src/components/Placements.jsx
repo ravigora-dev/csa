@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { placedStudents } from "../constant";
+import { placedStudents } from "../constants/constant";
 
 function Placements() {
   const navigate = useNavigate();

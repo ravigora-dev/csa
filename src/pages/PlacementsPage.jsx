@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import Placements from '../components/Placements';
-import Header from '../components/Header';
+import React, { useEffect } from "react";
+import Placements from "../components/Placements";
+import Header from "../components/Header";
 
 function PlacementsPage() {
   // Scroll to top when component mounts
@@ -11,11 +11,11 @@ function PlacementsPage() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-20">
+      <main className="">
         <Placements />
       </main>
     </div>
   );
 }
 
-export default PlacementsPage; 
+export default PlacementsPage;

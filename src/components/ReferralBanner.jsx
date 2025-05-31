@@ -36,8 +36,9 @@ const ReferralBanner = () => {
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div className="bg-gradient-to-r from-primary/80 to-primary-dark/95 text-white py-2.5 relative">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="bg-gradient-to-r from-primary/90 via-primary to-primary-dark/95 text-white py-2.5 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.2] bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] bg-[length:20px_20px]"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="flex items-center justify-center gap-2 text-sm sm:text-base">
             <FaUserFriends className="hidden sm:block text-xl" />
             <p className="font-medium text-center">

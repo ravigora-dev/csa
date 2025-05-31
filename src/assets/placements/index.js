@@ -11,3 +11,4 @@ export { default as Navneeth } from "./navneeth.png";
 export { default as Sachin } from "./sachin.png";
 export { default as Dasthagiri } from "./dasthagiri.png";
 export { default as Archana } from "./archana.png";
+export { default as GuruCharan } from "./gurucharan.png";

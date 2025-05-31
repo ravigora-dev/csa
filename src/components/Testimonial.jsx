@@ -1,5 +1,5 @@
 import React from "react";
-import { placedStudents } from "../constant";
+import { placedStudents } from "../constants/constant";
 
 export const Testimonial = () => {
   const testimonials = placedStudents.map(student => ({
