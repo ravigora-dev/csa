@@ -205,7 +205,8 @@ export const placedStudents = [
     company: "Amplelogic",
     package: "₹3 LPA",
     image: GuruCharan,
-    companyLogo: Nova,
+    companyLogo:
+      "https://amplelogic.com/wp-content/uploads/2023/03/10018-4-300x56-1.jpg",
     course: "Full Stack Development",
     batch: "2023",
     testimonial:
