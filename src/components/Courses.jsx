@@ -256,7 +256,9 @@ const Courses = () => {
               <div className="flex items-center justify-between border-t border-gray-100 pt-3 sm:pt-4 mt-auto">
                 <div>
                   <div className="flex items-center gap-1 sm:gap-2">
-                    <span className="text-sm sm:text-lg line-through text-gray-400">40,000</span>
+                    <span className="text-sm sm:text-lg line-through text-gray-400">
+                      40,000
+                    </span>
                     <span className="text-lg sm:text-xl font-bold text-gray-900">
                       {course.price}
                     </span>
@@ -268,6 +270,12 @@ const Courses = () => {
                   </div>
                 </div>
                 <div className="flex gap-1 sm:gap-2">
+                  <button
+                    onClick={() => handleLearnMore(course)}
+                    className="px-3 sm:px-4 py-1.5 sm:py-2 bg-orange-500 text-white text-xs sm:text-sm font-medium rounded-lg hover:bg-orange-600 transition-all duration-300"
+                  >
+                    Learn More
+                  </button>
                   <button
                     onClick={() => handleDownloadSyllabus(course)}
                     className="px-2 sm:px-3 py-1.5 sm:py-2 bg-gray-600 text-white text-xs sm:text-sm font-medium rounded-lg hover:bg-gray-700 transition-all duration-300 flex items-center gap-1"
@@ -286,12 +294,6 @@ const Courses = () => {
                       />
                     </svg>
                     Syllabus
-                  </button>
-                  <button
-                    onClick={() => handleLearnMore(course)}
-                    className="px-3 sm:px-4 py-1.5 sm:py-2 bg-orange-500 text-white text-xs sm:text-sm font-medium rounded-lg hover:bg-orange-600 transition-all duration-300"
-                  >
-                    Learn More
                   </button>
                 </div>
               </div>

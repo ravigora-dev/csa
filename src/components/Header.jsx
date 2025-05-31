@@ -90,7 +90,13 @@ function Header() {
       >
         <div className="w-full flex justify-between items-center px-4 sm:px-6 lg:px-8">
           {/* Logo Section */}
-          <div className="flex items-center flex-shrink-0">
+          <div 
+            className="flex items-center flex-shrink-0 cursor-pointer" 
+            onClick={() => {
+              navigate('/');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          >
             <img
               src={Logo}
               alt="CareerSure Academy Logo"
