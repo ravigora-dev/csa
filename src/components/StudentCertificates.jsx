@@ -147,12 +147,23 @@ const StudentCertificates = () => {
             Our{" "}
             <span className="text-primary relative inline-block">
               Graduates
-              <motion.span
-                className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-primary/0 via-primary to-primary/0"
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              />
+              <span className="absolute left-0 -bottom-3 w-full h-4 pointer-events-none select-none">
+                <svg
+                  className="absolute left-1/2 -bottom-1 translate-x-[-50%] w-full h-6 z-0"
+                  viewBox="0 0 100 50"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M10 40 Q 50 0, 90 40"
+                    stroke="#FF6B00"
+                    strokeWidth="5"
+                    strokeLinecap="round"
+                    fill="none"
+                  />
+                </svg>
+              </span>
             </span>{" "}
             Making Impact
           </h2>
