@@ -14,7 +14,7 @@ import {
   Nikhil,
   Sachin,
   Vinay,
-  Archana
+  Archana,
 } from "../assets/placements";
 import { Nova } from "../assets/company_Logos";
 
@@ -103,12 +103,12 @@ const TopPlacements = () => {
     },
     {
       id: 9,
-      name: "Rambabu",
-      position: "Data Analyst",
-      company: "Nova Web Innovations",
-      salary: "₹4 LPA",
+      name: "Ram",
+      position: "Software Developer",
+      company: "Accenture",
+      salary: "₹4.5 LPA",
       image: Rambabu,
-      logo: Nova,
+      logo: "https://e7.pngegg.com/pngimages/916/300/png-clipart-accenture-new-logo-icons-logos-emojis-iconic-brands.png",
     },
     {
       id: 10,
@@ -169,7 +169,7 @@ const TopPlacements = () => {
                 style={{
                   minHeight: "100%",
                   animation: "scroll 40s linear infinite",
-                  animationPlayState: isPaused ? "paused" : "running"
+                  animationPlayState: isPaused ? "paused" : "running",
                 }}
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
@@ -414,16 +414,16 @@ const TopPlacements = () => {
               Kick Start Your Journey &rarr;
             </button>
             {/* Download Brochure Button */}
-              <button
-                className="w-full font-bold py-3 rounded-lg shadow-lg bg-gradient-to-r from-primary to-primary-light text-white hover:-translate-y-1 hover:shadow-xl transition-all"
-                onClick={() =>
-                  navigate("/enroll", {
-                    state: { postSubmitDownloadType: "brochure" },
-                  })
-                }
-              >
-                Download Brochure
-              </button>
+            <button
+              className="w-full font-bold py-3 rounded-lg shadow-lg bg-gradient-to-r from-primary to-primary-light text-white hover:-translate-y-1 hover:shadow-xl transition-all"
+              onClick={() =>
+                navigate("/enroll", {
+                  state: { postSubmitDownloadType: "brochure" },
+                })
+              }
+            >
+              Download Brochure
+            </button>
           </div>
         </div>
       </div>

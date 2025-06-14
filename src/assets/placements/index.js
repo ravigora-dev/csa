@@ -1,6 +1,6 @@
 export { default as Udhay } from "./udhay.png";
 export { default as Teja } from "./teja.png";
-export { default as Rambabu } from "./rambabu.png";
+export { default as Rambabu } from "./ram.png";
 export { default as Dileep } from "./dileep.png";
 export { default as Jagadeesh } from "./jagadeesh.png";
 export { default as Rushikesh } from "./rushikesh.png";

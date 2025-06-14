@@ -131,13 +131,14 @@ export const placedStudents = [
   },
   {
     id: 9,
-    name: "Rambabu",
-    role: "Data Analyst",
-    company: "Nova Web Innovations",
-    package: "₹4 LPA",
+    name: "Ram",
+    role: "Software Developer",
+    company: "Accenture",
+    package: "₹4.5 LPA",
     image: Rambabu,
-    companyLogo: Nova,
-    course: "Data Science",
+    companyLogo:
+      "https://e7.pngegg.com/pngimages/916/300/png-clipart-accenture-new-logo-icons-logos-emojis-iconic-brands.png",
+    course: "Full Stack Development",
     batch: "2023",
     testimonial:
       "Career Sure Academy's full stack program provided me with the perfect foundation for my career.",
