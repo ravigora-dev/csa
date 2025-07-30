@@ -2,6 +2,7 @@ import React from "react";
 import HeroSection from "../components/HeroSection";
 
 function HomePage() {
+  console.log("hi")
   return (
     <>
       <section id="home" className="min-h-screen">
