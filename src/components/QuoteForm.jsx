@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase/config";
 import { sendEmail } from "../services/emailService";
@@ -38,7 +38,6 @@ function QuoteForm({
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const validate = () => {
     const newErrors = {};
     if (!formData.name.trim()) newErrors.name = "Name is required.";
@@ -57,6 +56,7 @@ function QuoteForm({
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+
     setFormData((prev) => ({
       ...prev,
       [name]: type === "checkbox" ? checked : value,
@@ -257,13 +257,11 @@ function QuoteForm({
             Enrollment <span className="text-primary">Form</span>
           </h2>
           <p className="text-gray-600 text-sm">
-            {downloadType || courseToDownload ? (
-              "Fill in your details to download the syllabus."
-            ) : postSubmitDownloadType === "brochure" ? (
-              "Fill in your details to download the brochure."
-            ) : (
-              "Fill in your details and our team will reach out to you"
-            )}
+            {downloadType || courseToDownload
+              ? "Fill in your details to download the syllabus."
+              : postSubmitDownloadType === "brochure"
+              ? "Fill in your details to download the brochure."
+              : "Fill in your details and our team will reach out to you"}
           </p>
         </div>
         <div className="space-y-5">
@@ -287,24 +285,6 @@ function QuoteForm({
           </div>
           <div className="group">
             <label className="block text-gray-700 text-sm font-medium mb-1.5">
-              Email <span className="text-primary">*</span>
-            </label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className={`w-full px-3 py-2 border ${
-                errors.email ? "border-red-400" : "border-gray-300"
-              } rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all text-sm bg-white`}
-              placeholder="Enter your email address"
-            />
-            {errors.email && (
-              <p className="text-red-500 text-xs mt-1">{errors.email}</p>
-            )}
-          </div>
-          <div className="group">
-            <label className="block text-gray-700 text-sm font-medium mb-1.5">
               Mobile Number <span className="text-primary">*</span>
             </label>
             <input
@@ -324,23 +304,46 @@ function QuoteForm({
           </div>
           <div className="group">
             <label className="block text-gray-700 text-sm font-medium mb-1.5">
+              Email <span className="text-primary">*</span>
+            </label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className={`w-full px-3 py-2 border ${
+                errors.email ? "border-red-400" : "border-gray-300"
+              } rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all text-sm bg-white`}
+              placeholder="Enter your email address"
+            />
+            {errors.email && (
+              <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+            )}
+          </div>
+          <div className="group">
+            <label className="block text-gray-700 text-sm font-medium mb-1.5">
               Current Status <span className="text-primary">*</span>
             </label>
-            <select
-              name="status"
+            <ul
               value={formData.status}
               onChange={handleChange}
               className={`w-full px-3 py-2 border ${
                 errors.status ? "border-red-400" : "border-gray-300"
-              } rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all text-sm bg-white appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20d%3D%22M6%208l4%204%204-4%22%20fill%3D%22none%22%20stroke%3D%22%23666%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E')] bg-[length:20px_20px] bg-[right_0.5rem_center] bg-no-repeat pr-8`}
+              } rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all text-sm bg-white appearance-none  bg-[length:20px_20px]  bg-no-repeat pr-8`}
             >
-              <option value="">Select your current status</option>
               {statusOptions.map((status) => (
-                <option key={status} value={status}>
+                <li>
+                  <input
+                    key={status}
+                    value={status}
+                    type="radio"
+                    name="status"
+                    className="input"
+                  />{" "}
                   {status}
-                </option>
+                </li>
               ))}
-            </select>
+            </ul>
             {errors.status && (
               <p className="text-red-500 text-xs mt-1">{errors.status}</p>
             )}

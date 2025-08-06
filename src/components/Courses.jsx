@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import CourseDetailsModal from "./CourseDetailsModal";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase/config";
-import { Mern, Java, Python } from "../assets/related_Pics";
+import { Mern, Java, Python, DataScience } from "../assets/related_Pics";
 import { useNavigate } from "react-router-dom";
 
 const Courses = () => {
@@ -137,6 +137,43 @@ const Courses = () => {
         },
       ],
     },
+    {
+      id: "datascience",
+      title: "Advanced Data Science & AI",
+      description:
+        "Master data analysis, machine learning, and AI deployment using Python, Django, React, and modern tools.",
+      price: "₹35,000",
+      score: 4.8,
+      features: [
+        "Hands-on machine learning projects",
+        "Python and AI model building",
+        "Web integration with React & Django",
+        "Cloud deployment with Docker",
+        "Job-ready portfolio preparation",
+      ],
+      curriculum: [
+        {
+          title: "Data Science & Machine Learning",
+          topics: [
+            "Python for Data Science",
+            "Pandas and NumPy",
+            "Machine Learning Algorithms",
+            "Model Evaluation & Optimization",
+            "Deep Learning Basics",
+          ],
+        },
+        {
+          title: "Full Stack & Deployment",
+          topics: [
+            "Django REST Framework",
+            "React.js Frontend",
+            "PostgreSQL Database",
+            "API Integration",
+            "Cloud Deployment with Docker & CI/CD",
+          ],
+        },
+      ],
+    },
   ];
 
   return (
@@ -168,6 +205,8 @@ const Courses = () => {
                     ? Mern
                     : course.id === "java"
                     ? Java
+                    : course.id === "datascience"
+                    ? DataScience
                     : course.id === "python"
                     ? Python
                     : "https://cdn.pixabay.com/photo/2018/09/18/11/19/artificial-intelligence-3685928_1280.png"

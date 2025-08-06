@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import Logo from "../assets/csa_FaviconRound.png";
-
+const whatsapp_url = import.meta.env.VITE_WHATSAPP_URL;
 function Footer() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -48,7 +48,7 @@ function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
           {/* Company Info */}
           <div className="">
-            <button 
+            <button
               onClick={(e) => handleLinkClick(e, "home")}
               className="flex items-center justify-center flex-shrink-0 hover:opacity-80 transition-opacity p-2"
             >
@@ -194,10 +194,7 @@ function Footer() {
                     {contact.text.split(", ").map((number, numIndex) => (
                       <React.Fragment key={numIndex}>
                         <a
-                          href={`https://api.whatsapp.com/send/?phone=${number.replace(
-                            /\s|\+/g,
-                            ""
-                          )}&text=Hi%21+I%E2%80%99m+very+interested+%E2%80%94+can+you+send+me+more+info+as+soon+as+possible%3F&type=phone_number&app_absent=0`}
+                          href={whatsapp_url}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="hover:underline"
