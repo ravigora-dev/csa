@@ -8,6 +8,7 @@ import {
   MERN,
   Borchure,
 } from "../assets/related_PDFs";
+import { Link, useLocation } from "react-router-dom";
 
 // Remove hardcoded email and use environment variable
 const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL;
@@ -38,6 +39,7 @@ function QuoteForm({
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const location = useLocation();
   const validate = () => {
     const newErrors = {};
     if (!formData.name.trim()) newErrors.name = "Name is required.";
@@ -238,12 +240,21 @@ function QuoteForm({
           <p className="text-gray-600 text-sm mb-4 font-medium">
             Thank you for enrolling. Our team will contact you soon.
           </p>
-          <button
-            onClick={() => (window.location.href = "/")}
-            className="px-6 py-2 bg-[#FF6B00] text-white rounded-lg font-medium hover:bg-orange-600 transition-all duration-300 text-sm shadow hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
-          >
-            Back to Home
-          </button>
+          {location.pathname === "/" ? (
+            <Link
+              to="/placements"
+              className="px-6 py-2 bg-[#FF6B00] text-white rounded-lg font-medium hover:bg-orange-600 transition-all duration-300 text-sm shadow hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
+            >
+              View Placement Record
+            </Link>
+          ) : (
+            <button
+              onClick={() => (window.location.href = "/")}
+              className="px-6 py-2 bg-[#FF6B00] text-white rounded-lg font-medium hover:bg-orange-600 transition-all duration-300 text-sm shadow hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
+            >
+              Back to Home
+            </button>
+          )}
         </div>
       </div>
     );
@@ -332,13 +343,13 @@ function QuoteForm({
               } rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all text-sm bg-white appearance-none  bg-[length:20px_20px]  bg-no-repeat pr-8`}
             >
               {statusOptions.map((status) => (
-                <li>
+                <li className="align-middle p-1 text-base">
                   <input
                     key={status}
                     value={status}
                     type="radio"
                     name="status"
-                    className="input"
+                    className="input h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-600  align-middle"
                   />{" "}
                   {status}
                 </li>
