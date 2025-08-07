@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // Make sure you have react-router-dom installed
-
+const whatsapp_url = import.meta.env.VITE_WHATSAPP_URL;
 function GetInTouch() {
   const navigate = useNavigate();
 
@@ -139,7 +139,7 @@ function GetInTouch() {
                   </h4>
                   <div className="space-y-1">
                     <a
-                      href="https://api.whatsapp.com/send/?phone=918919734391&text=Hi%21+I%E2%80%99m+very+interested+%E2%80%94+can+you+send+me+more+info+as+soon+as+possible%3F&type=phone_number&app_absent=0"
+                      href={whatsapp_url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-600 hover:text-[#FF6B00] transition-colors duration-300 block text-sm hover:underline"
@@ -147,7 +147,7 @@ function GetInTouch() {
                       +91 8919734391
                     </a>
                     <a
-                      href="https://api.whatsapp.com/send/?phone=916301046346&text=Hi%21+I%E2%80%99m+very+interested+%E2%80%94+can+you+send+me+more+info+as+soon+as+possible%3F&type=phone_number&app_absent=0"
+                      href={whatsapp_url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-600 hover:text-[#FF6B00] transition-colors duration-300 block text-sm hover:underline"

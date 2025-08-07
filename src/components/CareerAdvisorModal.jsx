@@ -3,7 +3,7 @@ import whatsappIcon from "../assets/whatsApp-Icon.png";
 import { useNavigate } from "react-router-dom";
 import { Checked } from "../assets/icons";
 import { Pasha } from "../assets/related_Pics";
-
+const whatsapp_url = import.meta.env.VITE_WHATSAPP_URL;
 const CareerAdvisorModal = ({ isOpen, onClose }) => {
   const navigate = useNavigate();
   if (!isOpen) return null;
@@ -67,7 +67,7 @@ const CareerAdvisorModal = ({ isOpen, onClose }) => {
 
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-auto">
                 <a
-                  href="https://api.whatsapp.com/send/?phone=916301046346&text=Hi%21+I%E2%80%99m+very+interested+%E2%80%94+can+you+send+me+more+info+as+soon+as+possible%3F&type=phone_number&app_absent=0"
+                  href={whatsapp_url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn bg-gradient-to-r from-[#25D366] to-[#1DBA7E] hover:from-[#1DBA7E] hover:to-[#25D366] text-white flex items-center justify-center gap-2 text-sm md:text-base w-full sm:w-auto px-4 md:px-6 py-2.5 md:py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-opacity-50"

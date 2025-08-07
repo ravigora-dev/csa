@@ -46,7 +46,7 @@ const GoogleReviews = () => {
 
   return (
     <>
-      <div className="py-16 bg-[#002B1D] mt-14">
+      <div className="py-16 bg-[#002B1D]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">

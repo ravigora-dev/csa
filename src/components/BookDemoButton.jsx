@@ -1,11 +1,8 @@
 import React from "react";
-
+const whatsapp_url = import.meta.env.VITE_WHATSAPP_URL;
 const BookDemoButton = () => {
   const handleClick = () => {
-    window.open(
-      "https://api.whatsapp.com/send/?phone=916301046346&text=Hi%21+I%E2%80%99m+interested+in+booking+a+demo.+Can+you+please+share+the+details%3F&type=phone_number&app_absent=0",
-      "_blank"
-    );
+    window.open(whatsapp_url);
   };
 
   return (
@@ -19,4 +16,4 @@ const BookDemoButton = () => {
   );
 };
 
-export default BookDemoButton; 
+export default BookDemoButton;

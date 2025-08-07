@@ -202,7 +202,7 @@ export const placedStudents = [
   {
     id: 14,
     name: "Barenkala Guru Charan",
-    role: "Software Tester",
+    role: "Business Analyst",
     company: "Amplelogic",
     package: "₹3 LPA",
     image: GuruCharan,

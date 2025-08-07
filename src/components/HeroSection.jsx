@@ -12,6 +12,7 @@ import CareerAdvisorModal from "./CareerAdvisorModal";
 import RoadmapSection from "./RoadmapSection";
 import StudentReels from "./StudentReels";
 import GoogleReviews from "./GoogleReviews";
+import EnrollPage from "../pages/EnrollPage";
 
 function HeroSection() {
   const [showAdvisorModal, setShowAdvisorModal] = useState(false);
@@ -22,7 +23,7 @@ function HeroSection() {
   useEffect(() => {
     timeoutRef.current = setTimeout(() => {
       setShowAdvisorModal(true);
-    }, 5000);
+    }, 10000);
     return () => {
       clearTimeout(timeoutRef.current);
       clearInterval(intervalRef.current);
@@ -37,7 +38,7 @@ function HeroSection() {
     intervalRef.current = setInterval(() => {
       setShowAdvisorModal(true);
       clearInterval(intervalRef.current); // Only show once, reset on next close
-    }, 30000); // 30 seconds
+    }, 45000); // 45 seconds
   };
 
   // Add custom CSS for auto-scrolling animations
@@ -243,6 +244,7 @@ function HeroSection() {
         <TopPlacements />
         <StudentReels />
         <CompaniesHire />
+        <EnrollPage />
         <GoogleReviews />
         <RoadmapSection />
         <ExpertTrainers />

@@ -2,7 +2,14 @@ import React, { useState, useEffect, useRef } from "react";
 import CourseDetailsModal from "./CourseDetailsModal";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase/config";
-import { Mern, Java, Python } from "../assets/related_Pics";
+import {
+  Mern,
+  Java,
+  Python,
+  DataScience,
+  DataAnalyst,
+  AiMl,
+} from "../assets/related_Pics";
 import { useNavigate } from "react-router-dom";
 
 const Courses = () => {
@@ -137,6 +144,123 @@ const Courses = () => {
         },
       ],
     },
+    {
+      id: "datascience",
+      title: "AI and Data Science using Python",
+      description:
+        "Learn Python, statistics, machine learning, deep learning, NLP, and Generative AI with real-world projects and cloud deployment.",
+      price: "₹40,000",
+      score: 4.9,
+      features: [
+        "Case study based learning",
+        "Industry expert sessions",
+        "Cloud deployment on AWS, Azure, GCP",
+        "Interview preparation with real projects",
+        "Hands-on Kaggle datasets",
+      ],
+      curriculum: [
+        {
+          title: "Core Data Science & Machine Learning",
+          topics: [
+            "Python programming and OOP",
+            "Statistics and Data Visualization",
+            "Data Preprocessing and Feature Engineering",
+            "Regression, Classification, Clustering",
+            "Model Evaluation and Optimization",
+          ],
+        },
+        {
+          title: "Advanced AI & Deployment",
+          topics: [
+            "Deep Learning with TensorFlow and Keras",
+            "Natural Language Processing and Computer Vision",
+            "Generative AI and Transformers",
+            "Model Deployment with Flask and Cloud",
+            "Industry Case Studies and Projects",
+          ],
+        },
+      ],
+    },
+    {
+      id: "data-analyst",
+      title: "Data Analytics & AI Integration",
+      description:
+        "Learn data analytics, Python, statistics, business intelligence, machine learning, and AI integration with hands-on projects and industry case studies.",
+      price: "₹38,000",
+      score: 4.8,
+      features: [
+        "Hands-on projects with real datasets",
+        "AI-driven analytics and automated reporting",
+        "Cloud deployment with AWS, Azure, GCP",
+        "Career preparation with resume and interview support",
+        "Mentoring from industry experts",
+      ],
+      curriculum: [
+        {
+          title: "Core Data Analytics",
+          topics: [
+            "Foundations of Data Analytics and Python",
+            "Data Cleaning, Preprocessing and EDA",
+            "SQL for Data Extraction",
+            "Statistics, Probability and Data Visualization",
+            "Dashboarding with Tableau and Power BI",
+          ],
+        },
+        {
+          title: "Advanced Analytics & AI",
+          topics: [
+            "Machine Learning with Scikit-learn",
+            "NLP and Generative AI for Analytics",
+            "Big Data and Cloud Platforms",
+            "Model Deployment with Flask and FastAPI",
+            "Capstone Project with End-to-End AI Integration",
+          ],
+        },
+      ],
+    },
+    {
+      id: "ai-ml-genai",
+      title: "AI, Machine Learning & Generative AI",
+      description:
+        "Master AI, ML, GenAI, NLP, and MLOps with real-world projects, cloud deployment, and domain-specific applications.",
+      price: "₹45,000",
+      score: 4.9,
+      features: [
+        "AI-driven adaptive learning and personalized content",
+        "5+ industry projects and one major capstone",
+        "Cloud deployment with AWS, Azure, GCP",
+        "MLOps with CI/CD pipelines and monitoring",
+        "Placement support with interview prep and career guidance",
+      ],
+      curriculum: [
+        {
+          title: "Core AI & Machine Learning",
+          topics: [
+            "Foundations of AI, ML and GenAI",
+            "Mathematics for AI (Linear Algebra, Statistics, Calculus)",
+            "Python programming and Git version control",
+            "Data collection, cleaning and preprocessing",
+            "Supervised and Unsupervised learning algorithms",
+            "Ensemble methods and feature engineering",
+            "Deep Learning with TensorFlow, Keras, PyTorch",
+            "Computer Vision and NLP fundamentals",
+          ],
+        },
+        {
+          title: "Advanced GenAI & Deployment",
+          topics: [
+            "Transformers, LLMs and prompt engineering",
+            "Generative AI applications with APIs (OpenAI, Gemini, Amazon)",
+            "MLOps principles and automated ML pipelines",
+            "Model deployment with Flask, Docker and Kubernetes",
+            "Domain-specific AI in healthcare, finance and supply chain",
+            "Explainable AI, ethics and fairness in AI systems",
+            "Capstone project with GenAI integration",
+            "Career readiness with resume building and mock interviews",
+          ],
+        },
+      ],
+    },
   ];
 
   return (
@@ -168,8 +292,14 @@ const Courses = () => {
                     ? Mern
                     : course.id === "java"
                     ? Java
+                    : course.id === "datascience"
+                    ? DataScience
                     : course.id === "python"
                     ? Python
+                    : course.id === "data-analyst"
+                    ? DataAnalyst
+                    : course.id === "ai-ml-genai"
+                    ? AiMl
                     : "https://cdn.pixabay.com/photo/2018/09/18/11/19/artificial-intelligence-3685928_1280.png"
                 }
                 alt={course.title}

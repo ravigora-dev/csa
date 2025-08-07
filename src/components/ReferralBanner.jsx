@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { IoClose } from "react-icons/io5";
 import { FaUserFriends } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ReferralBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -10,7 +11,7 @@ const ReferralBanner = () => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
       const scrollThreshold = 10;
-      
+
       // Only show when at the top of the page
       if (currentScrollPos < scrollThreshold) {
         setIsVisible(true);
@@ -20,20 +21,20 @@ const ReferralBanner = () => {
       setPrevScrollPos(currentScrollPos);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
 
   const handleClose = () => {
     setIsVisible(false);
     // Dispatch event to notify other components
-    window.dispatchEvent(new Event('referralBannerClosed'));
+    window.dispatchEvent(new Event("referralBannerClosed"));
   };
 
   return (
-    <div 
+    <div
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 transform ${
-        isVisible ? 'translate-y-0' : '-translate-y-full'
+        isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="bg-gradient-to-r from-gray-600/90 via-gray-700 to-gray-800/95 text-white py-2.5 relative overflow-hidden">
@@ -44,8 +45,8 @@ const ReferralBanner = () => {
             <p className="font-medium text-center">
               <span className="hidden sm:inline">Limited Time Offer! </span>
               Get <span className="font-bold">25% off</span> on all courses!
-              <a
-                href="/enroll"
+              <Link
+                to="/enroll"
                 className="ml-2 font-bold underline hover:no-underline inline-flex items-center group"
               >
                 Enroll Now
@@ -63,7 +64,7 @@ const ReferralBanner = () => {
                     d="M9 5l7 7-7 7"
                   ></path>
                 </svg>
-              </a>
+              </Link>
             </p>
             <button
               onClick={handleClose}
@@ -79,4 +80,4 @@ const ReferralBanner = () => {
   );
 };
 
-export default ReferralBanner; 
+export default ReferralBanner;

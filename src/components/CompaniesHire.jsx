@@ -191,7 +191,7 @@ const CompaniesHire = () => {
   ];
 
   return (
-    <div id="companies" className="w-full">
+    <div id="companies" className="w-full mb-5">
       <div className="text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 mt-6">
           <span className="text-gray-900">Our </span>
